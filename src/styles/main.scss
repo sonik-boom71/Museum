@@ -300,7 +300,7 @@ body.menu-open {
 .menu {
   position: absolute;
   z-index: 10;
-  top: 56px;
+  top: 0;
   right: 0;
   left: 0;
 
@@ -873,10 +873,6 @@ input:-webkit-autofill:focus {
 
   .button__label {
     min-width: 150px;
-  }
-
-  .menu {
-    top: 48px;
   }
 
   .menu__container {
