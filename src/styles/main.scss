@@ -161,6 +161,7 @@ body.menu-open {
   align-items: start;
 
   padding-bottom: 80px;
+  padding-left: max(20px, calc((100% - var(--container-max-width)) / 2 + 20px));
 }
 
 .hero__aside {
@@ -300,7 +301,8 @@ body.menu-open {
 }
 
 .menu__container {
-  padding: 34px 72px 30px 44px;
+  padding: 34px max(72px, calc((100% - var(--container-max-width)) / 2 + 72px))
+    30px max(44px, calc((100% - var(--container-max-width)) / 2 + 44px));
   background: var(--color-green);
 }
 
@@ -1153,11 +1155,13 @@ input:-webkit-autofill:focus {
 
   .hero {
     grid-template-columns: 1fr;
+    padding-left: 0;
   }
 
   .hero__content {
     order: 2;
     padding-top: 16px;
+    padding-inline: 20px;
   }
 
   .hero__image-wrap {
