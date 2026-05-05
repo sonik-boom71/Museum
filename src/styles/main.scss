@@ -90,15 +90,17 @@ body.menu-open {
 .header {
   position: relative;
   overflow: clip;
-  padding-top: 16px;
 }
 
 .header__top-bar {
   display: flex;
+  grid-column: 1 / span 2;
+  grid-row: 1;
   align-items: center;
   justify-content: flex-start;
 
   min-height: 48px;
+  padding-top: 16px;
   padding-bottom: 12px;
 }
 
@@ -157,7 +159,7 @@ body.menu-open {
 .hero {
   display: grid;
   grid-template-columns: 70px minmax(0, 435px) minmax(0, 1fr);
-  gap: 34px;
+  column-gap: 34px;
   align-items: start;
 
   padding-bottom: 80px;
@@ -166,6 +168,8 @@ body.menu-open {
 
 .hero__aside {
   display: flex;
+  grid-column: 1;
+  grid-row: 2;
   flex-direction: column;
   gap: 14px;
   align-items: center;
@@ -196,6 +200,8 @@ body.menu-open {
 
 .hero__content {
   display: flex;
+  grid-column: 2;
+  grid-row: 2;
   flex-direction: column;
   gap: 54px;
   align-items: flex-start;
@@ -262,6 +268,9 @@ body.menu-open {
 
 .hero__image-wrap {
   position: relative;
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  align-self: stretch;
 }
 
 .hero__logo-link {
@@ -841,7 +850,11 @@ input:-webkit-autofill:focus {
 
   .hero {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
-    gap: 24px;
+    column-gap: 24px;
+  }
+
+  .header__top-bar {
+    grid-column: 1;
   }
 
   .hero__aside {
@@ -849,8 +862,13 @@ input:-webkit-autofill:focus {
   }
 
   .hero__content {
+    grid-column: 1;
     gap: 38px;
     padding-top: 40px;
+  }
+
+  .hero__image-wrap {
+    grid-column: 2;
   }
 
   .button__label {
@@ -961,17 +979,14 @@ input:-webkit-autofill:focus {
     font-size: 28px;
   }
 
-  .header {
-    padding-top: 10px;
-  }
-
   .header__top-bar {
+    padding-top: 10px;
     padding-bottom: 8px;
   }
 
   .hero {
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
+    column-gap: 16px;
     padding-bottom: 64px;
   }
 
@@ -1158,14 +1173,22 @@ input:-webkit-autofill:focus {
     padding-left: 0;
   }
 
-  .hero__content {
-    order: 2;
-    padding-top: 16px;
+  .header__top-bar {
+    grid-column: 1;
+    grid-row: 1;
     padding-inline: 20px;
   }
 
   .hero__image-wrap {
-    order: 1;
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .hero__content {
+    grid-column: 1;
+    grid-row: 3;
+    padding-top: 16px;
+    padding-inline: 20px;
   }
 
   .hero__title {
