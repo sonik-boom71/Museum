@@ -1,5 +1,5 @@
 :root {
-  --color-page-bg: #d9d9d9;
+  --color-page-bg: #f5f5f5;
   --color-surface: #f5f5f5;
   --color-surface-alt: #fff;
   --color-text: #0f0e08;
@@ -298,7 +298,7 @@ body.menu-open {
 }
 
 .menu {
-  position: absolute;
+  position: fixed;
   z-index: 10;
   top: 0;
   right: 0;
