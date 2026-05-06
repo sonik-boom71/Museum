@@ -92,4 +92,12 @@ if (galleryTrack && galleryDots.length) {
       dot.classList.toggle('gallery__dot--active', i === activeIndex);
     });
   });
+
+  galleryDots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      const slideWidth = galleryTrack.firstElementChild.offsetWidth;
+
+      galleryTrack.scrollTo({ left: slideWidth * i, behavior: 'smooth' });
+    });
+  });
 }
